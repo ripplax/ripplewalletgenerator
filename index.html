@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ripple Wallet Generator</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ripple Wallet Generator. Generate a secure Ripple Paper Wallet Cold Storage. Also works offline." />
+  <link rel="canonical" href="https://ripplewalletgenerator" />
+  <script src="js/lodash.js"></script>
+  <script src="js/ripple-0.17.9.js"></script>
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+ </head>
+<body>
+  <div class="main-box create">
+    <h1>Generate your new Ripple Wallet</h1>
+    <div id="newAccount">
+
+      <div class="input-prepend" title="Ripple address">
+        <div class="prepend">Ripple address:</div>
+        <input type="text" readonly="readonly" id="address"/>
+      </div>
+
+      <div class="input-prepend" title="Ripple secret">
+        <div class="prepend">Ripple secret:</div>
+        <input type="text" readonly="readonly" id="secret" />
+      </div>
+
+      <div class="status" id="status">
+      </div>
+       
+      <button onclick="newripple()" id="button">
+        Generate
+      </button>
+      <div class="clearfix"></div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="main-box create">
+    <h2 style="padding-top: 10px;">What is a Ripple Wallet?</h2>
+    <p>A Ripple Wallet is very similar to a Bitcoin Wallet and consists of a public and private key. You can use the private key
+    to access your wallet. The private key can also be used to recalculate your public key, your so-called wallet address. Your
+    private key is therefore the access to your entire wallet, so you should keep it in a very safe place and store mutiple copies
+    of it in safe places.</p>
+    <h3>How can i access my Wallet ?</h3>
+    <p>You can access your wallet by visiting: <a href="https://jatchili.github.io/minimalist-ripple-client/" target="_blank">Ripple Wallet Client</a>. In the' Identity' section, click in the form field' secret'. There you can enter your private key, then confirm this by clicking
+    on' set identity'. Then click on the' connect to ripple' button in the' connect' section. You are now connected to your wallet</p>
+    <h4>How can i send a transaction?</h4>
+    <p>Follow the steps from "How can i access my wallet?". After you are connected to the Ripple Network, you can go to the section 'send payment'. Type in the amount of Ripple you want to send, then click 'direct xrp->xrp' so it will set 'XRP' to the form field. After that, fill in receivers public Ripple wallet address and click 'send'. Congratulations, your first Ripple transaction has been made.</p>
+  </div>
+
+    <div class="main-box create">
+      <footer>
+        ©
+        <span id="thisYear">2018</span>
+        <a href="http://ripplewalletgenerator.com" target="_blank">Ripple Wallet Generator</a>
+        All Rights Reserved
+      </footer>
+    </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
